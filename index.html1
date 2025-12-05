@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Surprise</title>
+
+<style>
+    body {
+        margin: 0;
+        font-family: 'Poppins', sans-serif;
+        background: #ffe6ec;
+        text-align: center;
+        color: #333;
+    }
+
+    header {
+        background: #ff4d6d;
+        padding: 20px;
+        color: white;
+        font-size: 28px;
+        font-weight: bold;
+        letter-spacing: 1px;
+    }
+
+    .hero {
+        padding: 20px;
+    }
+
+    .hero img {
+        width: 80%;
+        max-width: 300px;
+        border-radius: 15px;
+        box-shadow: 0 0 20px #ff99aa;
+        animation: float 3s infinite ease-in-out;
+    }
+
+    @keyframes float {
+        0% { transform: translateY(0px); }
+        50% { transform: translateY(-10px); }
+        100% { transform: translateY(0px); }
+    }
+
+    .message {
+        padding: 20px;
+        font-size: 19px;
+        line-height: 1.5;
+    }
+
+    .quotes-box {
+        background: white;
+        margin: 20px;
+        padding: 15px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px #ffc2c9;
+        font-size: 18px;
+    }
+
+    .surprise-btn {
+        padding: 12px 25px;
+        background: #ff4d6d;
+        color: white;
+        border: none;
+        border-radius: 10px;
+        font-size: 18px;
+        cursor: pointer;
+        box-shadow: 0px 5px 15px #ff99aa;
+        margin-top: 20px;
+    }
+
+    .songs {
+        margin-top: 30px;
+        padding: 20px;
+        font-size: 22px;
+        font-weight: bold;
+        color: #d6336c;
+    }
+
+    iframe {
+        width: 90%;
+        height: 220px;
+        border-radius: 10px;
+        margin-bottom: 20px;
+    }
+</style>
+</head>
+
+<body>
+
+<header>💖 A Beautiful Surprise For You 💖</header>
+
+<section class="hero">
+    <img src="https://i.postimg.cc/7Yz8Jt3x/romantic-couple.jpg" alt="Love Image">
+</section>
+
+<section class="message">
+    <h2>💍 Will You Be Mine Forever? 💍</h2>
+    <p>तुम वो ख्वाब हो जिसे मैं हर रोज़ जीना चाहता हूँ।  
+    क्या तुम मेरी जिंदगी बनोगी? ❤️</p>
+</section>
+
+<div class="quotes-box">
+    ❤️ *"प्यार वो नहीं जो दुनिया को दिखाया जाए,  
+    प्यार वो है जो दिल की गहराइयों में बसाया जाए।"*  
+    <br><br>
+    ❤️ *"तुम मिल गई हो तो अब ये मौसम, ये हवा, सब कुछ हसीन लगने लगा है।"*  
+    <br><br>
+    ❤️ *"तुम्हारी मुस्कान मेरी दुनिया है।"*  
+</div>
+
+<button class="surprise-btn" onclick="alert('I Love You ❤️ You Made My Life Special!')">
+    Click For Surprise 💝
+</button>
+
+<div class="songs">🎧 Romantic Hindi Songs</div>
+
+<!-- SONGS -->
+<iframe src="https://www.youtube.com/embed/EuUXEDABkHo" allowfullscreen></iframe>
+<iframe src="https://www.youtube.com/embed/HoCwa6vwg7I" allowfullscreen></iframe>
+<iframe src="https://www.youtube.com/embed/nfUeO-TqVsM" allowfullscreen></iframe>
+
+</body>
+</html>
