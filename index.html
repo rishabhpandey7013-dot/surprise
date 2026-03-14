@@ -12,13 +12,16 @@ font-family:Arial;
 background:linear-gradient(135deg,#ff4e8a,#ff8fab);
 text-align:center;
 color:white;
-overflow:hidden;
 }
+
+/* heading */
 
 h1{
 font-size:60px;
 margin-top:40px;
 }
+
+/* paragraph */
 
 p{
 width:80%;
@@ -26,6 +29,8 @@ margin:auto;
 font-size:20px;
 margin-top:30px;
 }
+
+/* buttons */
 
 button{
 padding:12px 25px;
@@ -47,16 +52,30 @@ color:white;
 position:relative;
 }
 
+/* hearts animation */
+
 .heart{
-position:absolute;
-bottom:-10px;
+position:fixed;
+bottom:-20px;
 font-size:22px;
 animation:float 6s linear infinite;
 }
 
 @keyframes float{
 0%{transform:translateY(0);opacity:1;}
-100%{transform:translateY(-100vh);opacity:0;}
+100%{transform:translateY(-120vh);opacity:0;}
+}
+
+/* ring animation */
+
+.ring{
+font-size:80px;
+animation:pop 1s ease infinite alternate;
+}
+
+@keyframes pop{
+from{transform:scale(1);}
+to{transform:scale(1.3);}
 }
 
 </style>
@@ -68,22 +87,26 @@ animation:float 6s linear infinite;
 
 <p>
 <b>
-Aradhya meri jaan, pata nahi kaise par tum meri life ka sabse beautiful part ban gayi ho. Jab bhi tumhari yaad aati hai na, dil automatically smile karne lagta hai. Shayad distance sirf 29 km ka hai, par tum mere dil ke bilkul paas rehti ho. Tumhari smile, tumhari baatein aur tumhara care karna mere liye duniya ki sabse precious cheez hai. Kabhi kabhi sochta hu life kitni boring hoti agar tum meri life me nahi aati. Tum sirf meri girlfriend nahi ho, tum meri happiness ho, meri peace ho aur meri favourite person ho. Main bas itna chahta hu ki humesha tumhare saath rahu aur tumhe har din special feel karaun. Isliye aaj dil se ek simple sa question poochna chahta hu.
+Aradhya meri jaan, pata nahi kaise par tum meri life ka sabse beautiful part ban gayi ho. Jab bhi tumhari yaad aati hai na, dil automatically smile karne lagta hai. Shayad distance sirf 29 km ka hai, par tum mere dil ke bilkul paas rehti ho. Tumhari smile aur tumhari baatein meri life ki sabse special cheez hai. Kabhi kabhi sochta hu agar tum meri life me nahi hoti to sab kuch kitna boring hota. Tum meri happiness ho, meri peace ho aur meri favourite person ho. Main bas chahta hu ki tum hamesha meri life me raho aur main tumhe har din special feel karaun.
 </b>
 </p>
+
+<br><br>
 
 <h2>Will you marry me Aradhya? 💍</h2>
 
 <button class="yes" onclick="yes()">Yes ❤️</button>
 <button class="no" onmouseover="move()">No 😅</button>
 
-<h3 id="result"></h3>
+<h2 id="result"></h2>
 
 <script>
 
 function yes(){
-document.getElementById("result").innerHTML="Yay ❤️ Mujhe pata tha tum haan hi bologi. I love you Aradhya 💞";
+document.getElementById("result").innerHTML="💍 She said YES! I love you Aradhya ❤️";
 }
+
+/* no button dodge */
 
 function move(){
 let btn=document.querySelector(".no");
@@ -91,6 +114,8 @@ btn.style.position="absolute";
 btn.style.left=Math.random()*80+"%";
 btn.style.top=Math.random()*80+"%";
 }
+
+/* hearts animation */
 
 setInterval(()=>{
 let heart=document.createElement("div");
