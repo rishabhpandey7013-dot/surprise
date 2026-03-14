@@ -14,14 +14,17 @@ text-align:center;
 color:white;
 }
 
-/* heading */
-
 h1{
-font-size:60px;
-margin-top:40px;
+font-size:55px;
+margin-top:30px;
 }
 
-/* paragraph */
+img{
+width:250px;
+border-radius:20px;
+margin-top:20px;
+box-shadow:0 0 20px rgba(0,0,0,0.4);
+}
 
 p{
 width:80%;
@@ -29,8 +32,6 @@ margin:auto;
 font-size:20px;
 margin-top:30px;
 }
-
-/* buttons */
 
 button{
 padding:12px 25px;
@@ -52,8 +53,6 @@ color:white;
 position:relative;
 }
 
-/* hearts animation */
-
 .heart{
 position:fixed;
 bottom:-20px;
@@ -66,16 +65,9 @@ animation:float 6s linear infinite;
 100%{transform:translateY(-120vh);opacity:0;}
 }
 
-/* ring animation */
-
-.ring{
-font-size:80px;
-animation:pop 1s ease infinite alternate;
-}
-
-@keyframes pop{
-from{transform:scale(1);}
-to{transform:scale(1.3);}
+.big{
+font-size:70px;
+margin-top:35vh;
 }
 
 </style>
@@ -83,30 +75,26 @@ to{transform:scale(1.3);}
 
 <body>
 
+<div id="main">
+
 <h1>RAUNAK LOVE ARADHYA ❤️</h1>
+
+<img src="photo.jpg">
 
 <p>
 <b>
-Aradhya meri jaan, pata nahi kaise par tum meri life ka sabse beautiful part ban gayi ho. Jab bhi tumhari yaad aati hai na, dil automatically smile karne lagta hai. Shayad distance sirf 29 km ka hai, par tum mere dil ke bilkul paas rehti ho. Tumhari smile aur tumhari baatein meri life ki sabse special cheez hai. Kabhi kabhi sochta hu agar tum meri life me nahi hoti to sab kuch kitna boring hota. Tum meri happiness ho, meri peace ho aur meri favourite person ho. Main bas chahta hu ki tum hamesha meri life me raho aur main tumhe har din special feel karaun.
+Aradhya meri jaan, tum meri life ki sabse beautiful feeling ho. Jab bhi tumhari yaad aati hai dil automatically smile karne lagta hai. Shayad distance sirf 29 km ka hai, par tum mere dil ke bilkul paas rehti ho. Tum meri happiness ho, meri peace ho aur meri favourite person ho. Main bas chahta hu ki humesha tumhare saath rahu aur tumhe har din special feel karaun.
 </b>
 </p>
-
-<br><br>
 
 <h2>Will you marry me Aradhya? 💍</h2>
 
 <button class="yes" onclick="yes()">Yes ❤️</button>
 <button class="no" onmouseover="move()">No 😅</button>
 
-<h2 id="result"></h2>
+</div>
 
 <script>
-
-function yes(){
-document.getElementById("result").innerHTML="💍 She said YES! I love you Aradhya ❤️";
-}
-
-/* no button dodge */
 
 function move(){
 let btn=document.querySelector(".no");
@@ -115,7 +103,17 @@ btn.style.left=Math.random()*80+"%";
 btn.style.top=Math.random()*80+"%";
 }
 
-/* hearts animation */
+function yes(){
+
+document.body.innerHTML="<h1 class='big'>THANK YOU ARADHYA ❤️</h1>";
+
+setTimeout(function(){
+
+document.body.innerHTML="<h1 class='big'>I LOVE YOU ❤️❤️❤️</h1>";
+
+},3000);
+
+}
 
 setInterval(()=>{
 let heart=document.createElement("div");
